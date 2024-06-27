@@ -10,4 +10,4 @@ or, to clean, compile and execute
 $ make
 ```
 
-![Crafting Interpreters](https://craftinginterpreters.com)
+[Crafting Interpreters](https://craftinginterpreters.com)
