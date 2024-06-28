@@ -9,5 +9,3 @@ or, to clean, compile and execute
 ```bash
 $ make
 ```
-
-[Crafting Interpreters](https://craftinginterpreters.com)
