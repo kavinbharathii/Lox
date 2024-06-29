@@ -7,13 +7,14 @@ TOOLPATH = tool
 OUTPATH = prod
 MAIN = lox.Lox
 TOOL = tool.GenerateAst
+LOXPATH = main.lox
 
 RM = del
 
 # Phony rules exclude their directory name counterparts and forces them to build
-.PHONY: all tool clean
+.PHONY: all tool clean lox
 
-all: clean classes tool run 
+all: clean classes tool lox
 
 classes: $(SRCPATH)/*.java
 	$(JC) $(JFLAG) . $^
@@ -32,3 +33,6 @@ tool: $(TOOLPATH)/*.java
 clean:
 	$(RM) $(SRCPATH)\*.class
 	$(RM) $(TOOLPATH)\*.class
+
+lox: $(LOXPATH)
+	$(JVM) $(MAIN) $^
