@@ -181,11 +181,13 @@ class Scanner {
     }
 
     private boolean match(char expected) {
-        if (!isAtEnd()) return false;
+        if (isAtEnd()) return false;
 
         // if the character at the current position is not
         // what we are expecting (mostly '=') then we return false
-        if (source.charAt(current) != expected) return false;
+        if (source.charAt(current) != expected) {
+            return false;
+        }
 
         // else we advance
         current++;
